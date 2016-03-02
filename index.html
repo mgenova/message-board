@@ -1,7 +1,8 @@
 <html>
     <head>
-        <style>
         
+        <!-- CSS CODE -->
+        <style>
         .displaymsg {
             width: 70%;
             height: 50%;
@@ -24,19 +25,17 @@
             padding: 5px;
             margin-top:30px;
         }
-        
         </style>
 
     </head>
     
     <body>
-
-       
+        <!-- HTML CODE -->
         <div class='displaymsg' id='displaymsg'></div>
         <input type="text" class="inputmsg" id="inputmsg" placeholder="Enter your message..." >
       
+        <!-- JAVASCRIPT CODE -->
         <script>
-        
             //Literal object - message
             var message = {
                 inputMessage: {},  //empty object property
@@ -44,20 +43,16 @@
                 updateMessage: function(){
                     message.displayMessage.innerHTML = message.inputMessage.value;
                 
-            },
+                },
                 bind: function(){ //Intial Binding
                     message.inputMessage = document.getElementById('inputmsg');
                     message.displayMessage = document.getElementById('displaymsg');
                     message.inputMessage.addEventListener('input', message.updateMessage);
-            }
-        } //end of message object
+                }
+            } //end of message object
         
-        
-        
-        message.bind();  //calls bind function of message object
+            message.bind();  //calls bind function of message object
         </script> 
         
     </body>
-    
-    
 </html>
